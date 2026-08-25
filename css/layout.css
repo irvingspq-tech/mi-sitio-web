@@ -103,37 +103,48 @@ section {
 
 .hero-visual {
   position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-visual-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 640px;
+  padding-bottom: 40px;
+  padding-right: 24px;
 }
 
 .hero-visual-blob {
   position: absolute;
-  left: -10%;
-  bottom: -6%;
+  left: -40px;
+  bottom: 0;
+  z-index: 0;
   width: 92%;
   height: 92%;
-  border-radius: 40px;
-  background: linear-gradient(135deg, oklch(68% 0.17 152 / 0.35), oklch(50% 0.13 168 / 0.2));
-  filter: blur(2px);
-  z-index: 0;
+  border-radius: 2.5rem;
+  background: var(--gradient-hero-pastel);
+  box-shadow: var(--shadow-elegant);
 }
 
 .hero-visual-frame {
   position: relative;
   z-index: 1;
+  margin-top: -20px;
+  overflow: hidden;
   border-radius: var(--radius-lg);
-  border: 1px solid oklch(98% 0.005 250 / 0.15);
-  background: oklch(98% 0.005 250 / 0.06);
-  padding: 12px;
-  backdrop-filter: blur(6px);
+  border: 1px solid oklch(100% 0 0 / 0.4);
+  background: oklch(100% 0 0);
+  box-shadow: 0 10px 15px -3px oklch(0% 0 0 / 0.1), 0 4px 6px -4px oklch(0% 0 0 / 0.1);
 }
 
 .hero-visual-frame img {
+  display: block;
   width: 100%;
   height: auto;
-  object-fit: contain;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-elegant);
 }
 
 /* — Grids — */

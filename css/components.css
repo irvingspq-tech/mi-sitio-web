@@ -34,7 +34,52 @@
 }
 
 .section--dark .section-lead {
-  color: oklch(98% 0.005 250 / 0.78);
+  color: oklch(98% 0.005 250 / 0.8);
+}
+
+/* — Hero: título, lead y stats (tamaños exactos del sitio real) — */
+.hero-title {
+  margin-top: 24px;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 3.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+.hero-lead {
+  margin-top: 24px;
+  max-width: 576px;
+  line-height: 1.625;
+}
+
+.hero-stats dt {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: var(--accent);
+}
+
+.hero-stats dd {
+  margin-top: 4px;
+  font-size: 0.875rem;
+  line-height: 1.4286;
+  color: oklch(98% 0.005 250 / 0.7);
 }
 
 /* — Nav — */
@@ -109,8 +154,9 @@
 
 .btn-lg {
   height: 52px;
-  padding-inline: 34px;
+  padding-inline: 36px;
   font-size: 1rem;
+  border-radius: var(--radius-xl);
 }
 
 .btn-primary {
@@ -271,8 +317,7 @@
 }
 
 .feature-banner .accent {
-  color: var(--accent-foreground);
-  background: linear-gradient(transparent 60%, oklch(68% 0.17 152 / 0.35) 60%);
+  color: var(--accent);
 }
 
 /* — Tarjetas de módulo (con captura de producto) — */
@@ -289,14 +334,14 @@
 }
 
 .module-card-frame {
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: 14px;
   background: var(--gradient-card-frame);
 }
 
 .module-card-frame > div {
   overflow: hidden;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-xl);
   border: 1px solid var(--border);
   background: var(--card);
   box-shadow: var(--shadow-card);
@@ -554,7 +599,7 @@
 .field textarea {
   height: 44px;
   width: 100%;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   border: 1px solid var(--input);
   background: var(--background);
   padding: 0 14px;

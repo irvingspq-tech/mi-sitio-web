@@ -75,6 +75,14 @@
 
     var revealed = new WeakSet();
 
+    var groupCounts = new Map();
+    items.forEach(function (el) {
+      var parent = el.parentElement;
+      var index = groupCounts.has(parent) ? groupCounts.get(parent) : 0;
+      el.style.transitionDelay = Math.min(index * 90, 360) + "ms";
+      groupCounts.set(parent, index + 1);
+    });
+
     if (!("IntersectionObserver" in window)) {
       items.forEach(function (el) {
         el.classList.add("is-visible");

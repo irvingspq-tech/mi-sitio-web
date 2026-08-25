@@ -34,6 +34,7 @@
 
   /* — Degradados — */
   --gradient-brand: linear-gradient(135deg, oklch(19% 0.06 258) 0%, oklch(32% 0.08 232) 55%, oklch(50% 0.13 168) 100%);
+  --gradient-hero-pastel: linear-gradient(135deg, oklch(55% 0.2 152) 0%, oklch(72% 0.18 155) 45%, oklch(88% 0.12 152) 100%);
   --gradient-soft: linear-gradient(180deg, oklch(99% 0.005 245) 0%, oklch(96% 0.02 165) 100%);
   --gradient-card-frame: linear-gradient(135deg, var(--brand-green-soft) 0%, var(--surface) 55%, oklch(28% 0.075 255 / 0.1) 100%);
 
@@ -43,9 +44,11 @@
 
   /* — Geometría — */
   --radius-lg: 20px;
+  --radius-xl: 16px;
   --radius-md: 12px;
   --radius-sm: 8px;
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-reveal: cubic-bezier(0.22, 1, 0.36, 1);
   --container-w: 1280px;
 
   color-scheme: light;
